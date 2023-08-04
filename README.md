@@ -12,6 +12,9 @@ Another novel use of the stable diffusion model is to show the the denoising pro
 
 Overall, this project allowed me to gain invaluable experience in cutting-edge machine learning technologies and their practical applications while contributing to the research efforts of the Centre for Artificial Intelligence.
 
+You can access the project at this URL https://160.85.252.37/
+Unfortunatelly, the running version is not accessible publicly because we pay for the OpenAI API and the use of our dedicated computational resources to run the models. As a result, we are unable to provide open access to the project at this time, but you are welcomed to go to one of ours events to check it out :)
+
 # Step by Step for deployment
 
 # Create SSL Key
