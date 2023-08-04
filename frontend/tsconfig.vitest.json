@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.app.json",
+  "exclude": [],
+  "include": ["src/**/*.ts", "src/**/*.js"],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node", "jsdom"],
+    "types": ["node","vite/client"],
+    "allowJs": true,
+    "lib": ["dom", "esnext"],
+    "target": "es5",
+    "isolatedModules": false
+  }
+}

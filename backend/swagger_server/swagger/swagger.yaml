@@ -1,0 +1,268 @@
+openapi: 3.0.0
+info:
+  title: Stability demo
+  description: Stability demo
+  version: 1.0.0
+servers:
+- url: https://160.85.252.37:8000/api/
+  description: SwaggerHub API Auto Mocking
+security:
+- basic: []
+tags:
+- name: login
+  description: Login the users
+- name: audio
+  description: Sending audio to the backend
+- name: gpt3
+  description: Sending text to the gpt3
+- name: stable_diffusion
+  description: Sending enhanced text to the stable diffusion mode
+paths:
+  /audio:
+    post:
+      tags:
+      - audio
+      operationId: audio_post
+      requestBody:
+        description: Sending the parameters to transform the audio into text
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Audio'
+        required: true
+      responses:
+        "200":
+          description: Receive the text
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextFromAudio'
+        "400":
+          description: It did not work
+      x-openapi-router-controller: swagger_server.controllers.audio_controller
+  /audio/{audioId}:
+    get:
+      tags:
+      - audio
+      operationId: audio_audio_id_get
+      parameters:
+      - name: audioId
+        in: path
+        description: audioId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: It worked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextFromAudio'
+        "400":
+          description: It did not work
+      x-openapi-router-controller: swagger_server.controllers.audio_controller
+  /gpt3:
+    post:
+      tags:
+      - gpt3
+      operationId: gpt3_post
+      requestBody:
+        description: Sending the text to be enhanced
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Prompt'
+        required: true
+      responses:
+        "200":
+          description: It worked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PromptEnhanced'
+        "400":
+          description: It did not work
+      x-openapi-router-controller: swagger_server.controllers.gpt3_controller
+  /gpt3/{promptEnhancedId}:
+    get:
+      tags:
+      - gpt3
+      operationId: gpt3_prompt_enhanced_id_get
+      parameters:
+      - name: promptEnhancedId
+        in: path
+        description: promptEnhancedId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: It worked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PromptEnhanced'
+        "400":
+          description: It did not work
+      x-openapi-router-controller: swagger_server.controllers.gpt3_controller
+  /stable_diffusion/generate_images:
+    post:
+      tags:
+      - stable_diffusion
+      operationId: stable_diffusion_generate_images_post
+      requestBody:
+        description: Sending the prompt to generate images
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImageGenerator'
+        required: true
+      responses:
+        "200":
+          description: It worked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Images'
+        "400":
+          description: It did not work
+      x-openapi-router-controller: swagger_server.controllers.stable_diffusion_controller
+  /stable_diffusion/generate_images/{imagesArrayId}:
+    get:
+      tags:
+      - stable_diffusion
+      operationId: stable_diffusion_generate_images_images_array_id_get
+      parameters:
+      - name: imagesArrayId
+        in: path
+        description: imagesArrayId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: It worked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Images'
+        "400":
+          description: It did not work
+      x-openapi-router-controller: swagger_server.controllers.stable_diffusion_controller
+components:
+  schemas:
+    Audio:
+      type: object
+      properties:
+        blobData:
+          type: string
+          format: binary
+        sessionId:
+          type: string
+          example: "6565689587454"
+        actionId:
+          type: string
+          example: "656568981221"
+        audioLanguage:
+          type: string
+          example: CH
+    TextFromAudio:
+      type: object
+      properties:
+        audioId:
+          type: string
+          example: "65656898"
+        audioContent:
+          type: string
+          format: binary
+      example:
+        audioId: "65656898"
+        audioContent: ""
+    Prompt:
+      type: object
+      properties:
+        prompt:
+          type: string
+          example: building
+        sessionId:
+          type: string
+          example: "6565689587454"
+        actionId:
+          type: string
+          example: "656568981221"
+    PromptEnhanced:
+      type: object
+      properties:
+        promptEnhancedId:
+          type: string
+          example: "65656898"
+        promptEnhancedContent:
+          type: string
+          example: Blue building in the mountains
+      example:
+        promptEnhancedId: "65656898"
+        promptEnhancedContent: Blue building in the mountains
+    Image:
+      type: object
+      properties:
+        imageId:
+          type: string
+        imageContent:
+          type: string
+          format: binary
+      example:
+        imageContent: ""
+        imageId: imageId
+    Images:
+      type: object
+      properties:
+        imagesArrayId:
+          type: string
+        imageArrayContent:
+          type: array
+          items:
+            $ref: '#/components/schemas/Image'
+      example:
+        imageArrayContent:
+        - imageContent: ""
+          imageId: imageId
+        - imageContent: ""
+          imageId: imageId
+        imagesArrayId: imagesArrayId
+    ImageGenerator:
+      type: object
+      properties:
+        promptEnhanced:
+          type: string
+          example: building
+        numberOfImages:
+          type: integer
+          example: 4
+        numberOfInferenceSteps:
+          type: integer
+          example: 4
+        height:
+          type: integer
+          example: 4
+        width:
+          type: integer
+          example: 4
+        sessionId:
+          type: string
+          example: "6565689587454"
+        actionId:
+          type: string
+          example: "656568981221"
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      x-basicInfoFunc: swagger_server.controllers.authorization_controller.check_basic
+

@@ -1,0 +1,29 @@
+rabbit_mq:
+  virtual_host: "zhaw-demo-template"
+  host: '160.85.252.37'
+
+openai:
+  host: "160.85.252.53"
+  port: 27017
+  user: "deri"
+  local_port: 5000
+  database_name: "stability_demo"
+  session_collection_name: "sessions"
+  action_collection_name: "actions"
+  image_path: "gen_data/generated_images"
+  audio_path: "gen_data/generated_audio"
+  gpt3_model_id: "text-davinci-003"
+
+audio:
+  de_audio_host: "http://160.85.252.43:8000"
+  ch_audio_host: "http://160.85.252.106:8000"
+  mt_host: "http://160.85.252.53:8000"
+
+db:
+  host: "160.85.252.37"
+  port: 27017
+  database_name: "zhaw_demo_template"
+  session_collection_name: "sessions"
+  action_collection_gpt3: "gpt3"
+  action_collection_audio: "audio"
+  action_collection_stable_diffusion: "stable_diffusion"

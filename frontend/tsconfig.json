@@ -1,0 +1,21 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "types": ["node","vite/client"],
+    "lib": ["dom", "esnext"],
+    "target": "es5",
+    "isolatedModules": false
+  },
+}
