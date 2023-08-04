@@ -152,4 +152,3 @@ $ db.createUser({ user: "admin", pwd: "<RABBIT_MQ_PW_PASSWORD>", roles: [ { role
 
 - open port 27017 on APU (sage)
 - change config.yaml to new IP address
-# speech-to-image-generator
