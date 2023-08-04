@@ -94,7 +94,7 @@
                   align-center rows="3"
                   no-resize
                   label='Describe what you want to see
-                  (E.g. "Mountains in Mars")'
+                  (E.g. "Mountains on Mars")'
                   variant="solo">
               </v-textarea>
               <v-btn @click="clearText" icon small class="v-textarea__icon"
