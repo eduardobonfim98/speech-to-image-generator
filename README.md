@@ -1,4 +1,18 @@
 # Speech to Text Image Generator
+*The development repository had private keys in its commits, necessitating the creation of a new public repository with only one commit to make the project accessible without compromising security.
+
+During my internship at the Centre for Artificial Intelligence at the Zurich University of Applied Sciences (Switzerland), I had the opportunity to work on an exciting and diverse project that aimed to demonstrate the practical applications of various machine learning models. The project encompasses the following key components:
+
+1-) A  model designed for translating Swiss German or German to English, which was developed in-house by our research center. This language translation model showcases our team's expertise in natural language processing.
+
+2-) A novel use of ChatGPT as a prompt enhancement tool. Through meticulous training with personalized prompts, I empowered ChatGPT to better understand and enhance user prompts, leading to the generation of better images with the Openjorney model.
+
+3-) Openjorney, an open source text-to-image model that generates AI art images in the distinctive style of Midjourney. This unique model is a fine-tuned version of Stable Diffusion.
+Another novel use of the stable diffusion model is to show the the denoising processing, coming from noise and becoming the image.
+
+Overall, this project allowed me to gain invaluable experience in cutting-edge machine learning technologies and their practical applications while contributing to the research efforts of the Centre for Artificial Intelligence.
+
+# Step by Step for deployment
 
 # Create SSL Key
 - I used this tutorial: https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https
