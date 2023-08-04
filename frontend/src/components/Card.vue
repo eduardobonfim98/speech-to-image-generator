@@ -49,7 +49,7 @@
       <v-container class="d-flex justify-center align-center"
                    style="color: #0d47a1; font-family: Arial, sans-serif; font-size: 18px; font-weight: 550;">
         <div class="d-flex flex-column justify-center align-center" style="text-align: center;">
-          <p>1-) Choose the language you want to transcript your prompt or write it directly in English</p>
+          <p>1-) Choose the language you want to translate your prompt or write it directly in English</p>
           <p>2-) Enhance your prompt for better results</p>
           <p>3-) Generate your image</p>
         </div>
