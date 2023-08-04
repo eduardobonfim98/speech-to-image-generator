@@ -10,6 +10,8 @@ During my internship at the Centre for Artificial Intelligence at the Zurich Uni
 3-) Openjorney, an open source text-to-image model that generates AI art images in the distinctive style of Midjourney. This unique model is a fine-tuned version of Stable Diffusion.
 Another novel use of the stable diffusion model is to show the the denoising processing, coming from noise and becoming the image.
 
+I have included a question mark button within the interface. By clicking on this button, users can access a comprehensive explanation of how the models function and the step-by-step process of the denoising technique. 
+
 Overall, this project allowed me to gain invaluable experience in cutting-edge machine learning technologies and their practical applications while contributing to the research efforts of the Centre for Artificial Intelligence.
 
 You can access the project at this URL https://160.85.252.37/
