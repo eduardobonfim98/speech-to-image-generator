@@ -1,7 +1,13 @@
 # Speech to Text Image Generator
 *The development repository had private keys in its commits, necessitating the creation of a new public repository with only one commit to make the project accessible without compromising security.
 
+  :movie_camera: :us: Video presentation of the project: https://youtu.be/SVxiDAktYoc 
+  
+  :movie_camera: :brazil:   Apresentação do projeto: https://youtu.be/82APdt9iw6g
+  
 During my internship at the Centre for Artificial Intelligence at the Zurich University of Applied Sciences (Switzerland), I had the opportunity to work on an exciting and diverse project that aimed to demonstrate the practical applications of various machine learning models. The project encompasses the following key components:
+
+<img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304517-f9011a7f-3a0d-41fc-9054-1a9c860e4f5f.png">
 
 1-) A  model designed for translating Swiss German or German to English, which was developed in-house by our research center. This language translation model showcases our team's expertise in natural language processing.
 
@@ -19,6 +25,25 @@ You can access the project at this URL https://160.85.252.37/
 Unfortunatelly, the running version is not accessible publicly because we pay for the OpenAI API and the use of our dedicated computational resources to run the models. As a result, we are unable to provide open access to the project at this time, but you are welcomed to go to one of ours events to check it out.
 
 ***Currently the translation function is not support on Safari and Google Chrome MOBILE due to the audio type not being supported**
+
+# Project workflow
+<img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304476-25305e30-192e-46f9-aa3c-3644ffc02647.png">
+
+After typing the prompt "Mountains on Mars with a blue lake" and clicking on the button "Generate Image" you can see the denoising process happening and the image being generated.
+
+<img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304503-5de5807c-58e7-4ed6-8cae-7c7cc4ba1f86.png">
+
+The generated imaged:
+
+<img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304483-99167438-19cd-444f-bdd1-6d0dd6cdd6c8.png">
+
+Using the ChatGPT to improve the quality and the level of specifications of a prompt sent to the image generation model. To generate a good image you most know a lot of parameters that will increase the level of detail of the image. ChatGPT was prompt engineered to enhance a simple prompt, enhancing the previous prompt we have "Stunningly beautiful view of Mountains on Mars with a blue lake, ultra-highres, alien landscape, surrealist 3D rendering, art by HR Giger and James Gurney, DenviantArt, volumetric lighting, intricate, warm and saturated colors." 
+
+<img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304524-53795e4a-db89-4de6-9784-05a05d4e2d6c.png">
+
+And generating the image again with the new prompt we have those two images: 
+
+<img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304519-2bf1efa6-3a6b-4bfd-a775-f20bdcd6ed29.png">
 
 # Step by Step for deployment
 
