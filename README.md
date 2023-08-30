@@ -9,11 +9,11 @@ During my internship at the Centre for Artificial Intelligence at the Zurich Uni
 
 <img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304517-f9011a7f-3a0d-41fc-9054-1a9c860e4f5f.png">
 
-1-) A  model designed for translating Swiss German or German to English, which was developed in-house by our research center. This language translation model showcases our team's expertise in natural language processing.
+- A  model designed for translating Swiss German or German to English, which was developed in-house by our research center. This language translation model showcases our team's expertise in natural language processing.
 
-2-) A novel use of ChatGPT as a prompt enhancement tool. Through meticulous training with personalized prompts, I prompt engineered ChatGPT to better understand and enhance user prompts, leading to the generation of better images with the Openjorney model.
+- A novel use of ChatGPT as a prompt enhancement tool. Through meticulous training with personalized prompts, I prompt engineered ChatGPT to better understand and enhance user prompts, leading to the generation of better images with the Openjorney model.
 
-3-) Openjorney, an open source text-to-image model that generates AI art images in the distinctive style of Midjourney. This unique model is a fine-tuned version of Stable Diffusion.
+- Openjorney, an open source text-to-image model that generates AI art images in the distinctive style of Midjourney. This unique model is a fine-tuned version of Stable Diffusion.
 Another novel use of the stable diffusion model is to show the the denoising processing, coming from noise and becoming the image.
 
 I have included a question mark button within the interface. By clicking on this button, users can access a comprehensive explanation of how the models function and the step-by-step process of the denoising technique. 
