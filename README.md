@@ -24,7 +24,7 @@ You can access the project at this URL https://160.85.252.37/
 
 Unfortunatelly, the running version is not accessible publicly because we pay for the OpenAI API and the use of our dedicated computational resources to run the models. As a result, we are unable to provide open access to the project at this time, but you are welcomed to go to one of ours events to check it out.
 
-***Currently the translation function is not support on Safari and Google Chrome MOBILE due to the audio type not being supported**
+***Currently the translation function is not supported on Safari and Google Chrome MOBILE due to the audio type not being supported**
 
 # Project workflow
 <img width="889" alt="1" src="https://user-images.githubusercontent.com/77940524/264304476-25305e30-192e-46f9-aa3c-3644ffc02647.png">
