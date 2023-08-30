@@ -1,4 +1,4 @@
-# Speech to Text Image Generator
+# Speech to Image Generator
 *The development repository had private keys in its commits, necessitating the creation of a new public repository with only one commit to make the project accessible without compromising security.
 
   :movie_camera: :us: Video presentation of the project: https://youtu.be/SVxiDAktYoc 
