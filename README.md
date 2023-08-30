@@ -114,31 +114,6 @@ I used this tutorial: https://blog.miguelgrinberg.com/post/how-to-deploy-a-react
 - You can also check the error logs in the /var/log/nginx/
 - You can also check the error logs for the gunicorn /var/log/gunicorn/
 
-
-# Possible problems
-- 1 -) 403 error, I solved it by changing the permissions of the project folder
-- sudo chmod o+x /home/eduardosiq/
-- sudo chmod o+x /home/eduardosiq/Documents/
-- sudo chmod o+x /home/eduardosiq/Documents/deployment/
-
-- 2 -) Redirect to the default apache page
-- I solved changing to the port 8843 in the nginx config file
-
-```                                                                                                                                                                                                             
-server {
-                listen 8443 ssl http2;
-                root /home/eduardosiq/Documents/deployment/zhaw-demo-template/frontend/dist/;
-                index index.html;
-                ssl_certificate /home/eduardosiq/Documents/deployment/zhaw-demo-template/frontend/cert.pem;
-                ssl_certificate_key /home/eduardosiq/Documents/deployment/zhaw-demo-template/frontend/key.pem;
-
-                location /api  {
-                        include proxy_params;
-                        proxy_pass https://localhost:8000;
-                }
-        }
-```
-
 # /backend
 
 - export <RABBIT_MQ_PW_PASSWORD>
@@ -199,3 +174,27 @@ $ db.createUser({ user: "admin", pwd: "<RABBIT_MQ_PW_PASSWORD>", roles: [ { role
 
 - open port 27017 on APU (sage)
 - change config.yaml to new IP address
+
+# Possible problems
+- 1 -) 403 error, I solved it by changing the permissions of the project folder
+- sudo chmod o+x /home/eduardosiq/
+- sudo chmod o+x /home/eduardosiq/Documents/
+- sudo chmod o+x /home/eduardosiq/Documents/deployment/
+
+- 2 -) Redirect to the default apache page
+- I solved changing to the port 8843 in the nginx config file
+
+```                                                                                                                                                                                                             
+server {
+                listen 8443 ssl http2;
+                root /home/eduardosiq/Documents/deployment/zhaw-demo-template/frontend/dist/;
+                index index.html;
+                ssl_certificate /home/eduardosiq/Documents/deployment/zhaw-demo-template/frontend/cert.pem;
+                ssl_certificate_key /home/eduardosiq/Documents/deployment/zhaw-demo-template/frontend/key.pem;
+
+                location /api  {
+                        include proxy_params;
+                        proxy_pass https://localhost:8000;
+                }
+        }
+```
