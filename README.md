@@ -11,7 +11,7 @@ During my internship at the Centre for Artificial Intelligence at the Zurich Uni
 
 1-) A  model designed for translating Swiss German or German to English, which was developed in-house by our research center. This language translation model showcases our team's expertise in natural language processing.
 
-2-) A novel use of ChatGPT as a prompt enhancement tool. Through meticulous training with personalized prompts, I empowered ChatGPT to better understand and enhance user prompts, leading to the generation of better images with the Openjorney model.
+2-) A novel use of ChatGPT as a prompt enhancement tool. Through meticulous training with personalized prompts, I prompt engineered ChatGPT to better understand and enhance user prompts, leading to the generation of better images with the Openjorney model.
 
 3-) Openjorney, an open source text-to-image model that generates AI art images in the distinctive style of Midjourney. This unique model is a fine-tuned version of Stable Diffusion.
 Another novel use of the stable diffusion model is to show the the denoising processing, coming from noise and becoming the image.
